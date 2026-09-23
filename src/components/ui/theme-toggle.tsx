@@ -1,0 +1,1 @@
+"use client"; import {Moon,Sun} from "lucide-react"; import {useTheme} from "next-themes"; export function ThemeToggle(){const {theme,setTheme}=useTheme();const dark=theme!=="light";return <button className="icon-button" onClick={()=>setTheme(dark?"light":"dark")} aria-label="Toggle color theme">{dark?<Sun size={17}/>:<Moon size={17}/>}</button>}

@@ -1,0 +1,1 @@
+import type{MetadataRoute}from"next";import{profile}from"@/data/profile";export default function sitemap():MetadataRoute.Sitemap{return profile.siteUrl?[{url:profile.siteUrl,lastModified:new Date()}]:[]}

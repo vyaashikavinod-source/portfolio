@@ -1,0 +1,6 @@
+"use client";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { createSupabaseBrowserClient } from "@/lib/supabase-browser";
+
+export default function StudioLogin() { const router = useRouter(); const [email, setEmail] = useState(""); const [password, setPassword] = useState(""); const [error, setError] = useState(""); const [saving, setSaving] = useState(false); const signIn = async (event: React.FormEvent) => { event.preventDefault(); setSaving(true); setError(""); try { const { error: authError } = await createSupabaseBrowserClient().auth.signInWithPassword({ email, password }); if (authError) setError("Unable to sign in."); else router.replace("/studio"); } catch { setError("Studio is not configured."); } finally { setSaving(false); } }; return <main className="wrap studio"><p className="eyebrow accent">Editor access</p><h1>Portfolio Studio</h1><form onSubmit={signIn}><label>Email<input type="email" value={email} onChange={(event) => setEmail(event.target.value)} required /></label><label>Password<input type="password" value={password} onChange={(event) => setPassword(event.target.value)} required /></label><button className="button primary" disabled={saving}>{saving ? "Signing in…" : "Sign In"}</button>{error && <p role="alert">{error}</p>}</form></main>; }
