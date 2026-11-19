@@ -1,1 +1,19 @@
-{"profile":{"githubUsername":"ruwactrl"},"experience":[],"education":[],"projectLinks":{"ClauseForge":{},"IncidentPilot":{},"MedScout":{},"Intelligent Network Fraud Detection System":{}}}
+{
+  "profile": {
+    "githubUsername": "ruwactrl"
+  },
+  "experience": [],
+  "education": [],
+  "projectLinks": {
+    "ClauseForge": {
+      "githubUrl": "https://github.com/vyaashikavinod-source/ClauseForge",
+      "liveDemoUrl": "https://clauseforge-demo.onrender.com"
+    },
+    "IncidentPilot": {
+      "githubUrl": "https://github.com/vyaashikavinod-source/IncidentPilot",
+      "liveDemoUrl": "https://incidentpilot-demo.onrender.com"
+    },
+    "MedScout": {},
+    "Intelligent Network Fraud Detection System": {}
+  }
+}
